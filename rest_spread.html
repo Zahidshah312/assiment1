@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+ <script>
+// let text = "zahid shah";
+// //let capitalized = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+// ; // Output: Zahid
+// let capitalized = text.charAt(0).toUpperCase() + text.substring(1); //bina text.slice(1)k
+// console.log(capitalized);
+
+
+// let value = 321;
+// const revVlaue = () => {
+//   let myRevVal = value.toString().split("").reverse().join("");
+// console.log(typeof value);
+// };
+// revVlaue();
+
+
+// let userDetails = {
+//     name: "Ajay Suneja",
+//     age: 26,
+//     designation: "Software Engineer",
+//     printDetails: function() {
+
+
+       // console.log(this.name); // Could be console.log(this); or console.log(this.name);
+//         // The visible code only shows this.name in the log, but it might be more complex
+//     }
+// }
+
+// userDetails.printDetails();
+
+// let userDetails2 = {
+//     name: "Ajay Suneja", // Assuming this is a placeholder or different person in the actual video
+//     age: 29,
+//     designation: "Software Engineer",
+// }
+
+// The video is about call, apply, and bind, so the next lines would likely be an example 
+// using one of those methods, like:
+
+// userDetails.printDetails.call(userDetails2); 
+// OR
+// userDetails.printDetails.apply(userDetails2); 
+// OR a separate function defined and then called.
+
+// Based purely on the visible code:
+// The code being displayed in the video editor is:
+/*
+1: let userDetails = {
+2:     name: "Ajay Suneja",
+3:     age: 26,
+4:     designation: "Software Engineer",
+5:     printDetails: function() {
+6:         console.log(this.name); 
+7:     }
+8: }
+9: 
+10: userDetails.printDetails();
+11: 
+12: let userDetails2 = {
+13:     name: "Ajay Suneja",
+14:     age: 29,
+15:     designation: "Software Engineer",
+16: }
+17: 
+18: userDetails.printDetails.call(this) // This line is cut off, but the context suggests .call()
+
+*/
+
+
+//rest & spread operator
+//rest operator
+
+
+// function addNumbers(a,b,c,...other) {
+
+// console.log(other);     //console.log(arguments);Es5 //arguments object is ma jo bhi apss kare gy wo combined form ma ay ga
+//     return a+b+c;
+// }
+// const res = addNumbers(2,3,4,5,6,7,8,9);
+// console.log(res);
+
+// addNumbers();
+
+
+
+
+// //spread operator
+// //is ma rest operator ka opposite hota hai
+
+// var names = ["zahid","shah","khan","ali"];
+// function getNames(name1,name2,name3) {
+//   console.log(...names);
+// } 
+// getNames(names[0],names[1],names[2],[3]); //spread operator
+
+// getNames(names); //spread operator
+
+
+
+//rest & spread with objects kese use hota hai
+
+// let user = {
+//   name: "zahid",
+//   age: 23,
+//   designation: "developer",
+
+//   // address: {
+//   //   city: "karachi",
+//   //   country: "pakistan"
+//   // }
+// };
+// const{...rest} = user;
+// console.log(rest); //rest operator 
+
+// //object spread
+// let user2 = {
+//   ...user,
+//    age: 25,
+//    city: "karachi"
+// };
+// console.log(user2); //spread operator
+
+
+</script> 
+</body>
+</html>

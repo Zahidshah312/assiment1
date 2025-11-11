@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eligibility Check (ES6)</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+       background: linear-gradient(135deg, #fe4f4f, #6100fe); 
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      background-color: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      text-align: left;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      color: #444;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #4facfe;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4facfe;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00c6ff;
+    }
+
+    #result {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="eligibilityForm">
+<h1>js ES6</h1>
+    <h2>Check Eligibility</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" required />
+
+    <label for="skill">Skill:</label>
+    <select id="skill">
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JS">JS</option>
+    </select>
+
+    <label for="experience">Experience (years):</label>
+    <input type="number" id="experience" min="0" required />
+
+    <label for="fee">Paid Fee:</label>
+    <input type="number" id="fee" min="0" required />
+
+    <button type="submit">Check</button>
+
+    <p id="result"></p>
+  </form>
+
+  <script>
+    // ✅ Arrow function (ES6)
+    const checkEligibility = (event) => {
+      event.preventDefault();
+
+      // ✅ Destructuring and querySelector
+      const name = document.querySelector("#name").value;
+      const skill = document.querySelector("#skill").value;
+      const experience = +document.querySelector("#experience").value;
+      const paidFee = +document.querySelector("#fee").value;
+
+      // ✅ Object literal for required fees
+      const requiredFee = { HTML: 4000, CSS: 5000, JS: 6000 }[skill];
+
+      // ✅ Logical and Ternary operator
+      const eligible = paidFee >= requiredFee && experience >= 2;
+
+      // ✅ Template literal for cleaner output
+      const resultHTML = `
+        Name: ${name}<br>
+        Skill: ${skill}<br>
+        Experience: ${experience} year(s)<br>
+        Paid Fee: Rs ${paidFee}<br>
+        Required Fee: Rs ${requiredFee}<br>
+        Status: <span style="color:${eligible ? "green" : "red"}">
+          ${eligible ? "✅ Eligible" : "❌ Not Eligible"}
+        </span>
+      `;
+
+      document.querySelector("#result").innerHTML = resultHTML;
+    };
+
+    // ✅ Modern event listener
+    document
+      .querySelector("#eligibilityForm")
+      .addEventListener("submit", checkEligibility);
+  </script>
+</body>
+</html> 
+
+
+
+
+  </script>
+</body>
+</html>
